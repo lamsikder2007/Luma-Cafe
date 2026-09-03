@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Cup body -->
+  <path d="M10 18h22v4c0 8.837-4.925 16-11 16s-11-7.163-11-16v-4z" fill="#8B5E3C"/>
+  <!-- Cup handle -->
+  <path d="M32 22h3a4 4 0 010 8h-3" stroke="#8B5E3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Saucer -->
+  <ellipse cx="21" cy="39" rx="14" ry="2.5" fill="#D4A574" opacity="0.6"/>
+  <!-- Steam lines -->
+  <path d="M16 14c0-2 2-3 2-5" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
+    <animate attributeName="d" values="M16 14c0-2 2-3 2-5;M16 12c0-2 2-4 2-6;M16 14c0-2 2-3 2-5" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M21 13c0-2 2-3 2-5" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" opacity="0.5">
+    <animate attributeName="d" values="M21 13c0-2 2-3 2-5;M21 11c0-2 2-4 2-6;M21 13c0-2 2-3 2-5" dur="2.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M26 14c0-2 2-3 2-5" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
+    <animate attributeName="d" values="M26 14c0-2 2-3 2-5;M26 12c0-2 2-4 2-6;M26 14c0-2 2-3 2-5" dur="1.8s" repeatCount="indefinite"/>
+  </path>
+</svg>
