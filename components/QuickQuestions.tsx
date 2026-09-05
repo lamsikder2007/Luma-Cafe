@@ -1,6 +1,6 @@
 "use client";
 
-import { Clock, UtensilsCrossed, Truck, MapPin } from "lucide-react";
+import { UtensilsCrossed, Tag, MapPin, ShoppingBag } from "lucide-react";
 
 interface QuickQuestionsProps {
   onSelect: (question: string) => void;
@@ -9,24 +9,24 @@ interface QuickQuestionsProps {
 
 const questions = [
   {
-    label: "Opening Hours",
-    question: "What are your opening hours?",
-    icon: Clock,
-  },
-  {
-    label: "Menu",
-    question: "What are your popular menu items?",
+    label: "Show me the menu",
+    question: "Show me the menu",
     icon: UtensilsCrossed,
   },
   {
-    label: "Delivery",
-    question: "Do you offer delivery?",
-    icon: Truck,
+    label: "Today's offers",
+    question: "What are today's offers?",
+    icon: Tag,
   },
   {
-    label: "Location",
-    question: "Where are you located?",
+    label: "Nearest location",
+    question: "Where is the nearest location?",
     icon: MapPin,
+  },
+  {
+    label: "I want to order",
+    question: "I want to order",
+    icon: ShoppingBag,
   },
 ];
 
@@ -37,17 +37,17 @@ export default function QuickQuestions({
   if (!visible) return null;
 
   return (
-    <div className="quick-questions" aria-label="Quick questions">
+    <div className="flex flex-wrap gap-2 pt-2 animate-fade-in-up" aria-label="Quick questions">
       {questions.map((q) => {
         const Icon = q.icon;
         return (
           <button
             key={q.label}
             onClick={() => onSelect(q.question)}
-            className="quick-question-button"
-            aria-label={`Ask about ${q.label}`}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface/50 border border-border-light/30 rounded-full text-xs font-medium text-text-secondary hover:text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-200 backdrop-blur-sm shadow-sm hover:shadow-md hover:-translate-y-0.5"
+            aria-label={`Ask: ${q.label}`}
           >
-            <Icon size={14} />
+            <Icon size={12} />
             <span>{q.label}</span>
           </button>
         );
